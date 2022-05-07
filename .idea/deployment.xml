@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" autoUpload="Always" serverName="huaweicloud" remoteFilesAllowedToDisappearOnAutoupload="false">
+    <serverData>
+      <paths name="huaweicloud">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/go-mutesting" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myAutoUpload" value="ALWAYS" />
+  </component>
+</project>
