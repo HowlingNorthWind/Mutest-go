@@ -3,7 +3,7 @@ package arithmetic
 import (
 	"testing"
 
-	"github.com/avito-tech/go-mutesting/test"
+	"mutesting/test"
 )
 
 func TestMutatorArithmeticAssignInvert(t *testing.T) {

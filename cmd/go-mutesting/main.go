@@ -25,15 +25,15 @@ import (
 
 	"github.com/jessevdk/go-flags"
 
-	"github.com/avito-tech/go-mutesting"
-	"github.com/avito-tech/go-mutesting/astutil"
-	"github.com/avito-tech/go-mutesting/mutator"
-	_ "github.com/avito-tech/go-mutesting/mutator/arithmetic"
-	_ "github.com/avito-tech/go-mutesting/mutator/branch"
-	_ "github.com/avito-tech/go-mutesting/mutator/expression"
-	_ "github.com/avito-tech/go-mutesting/mutator/loop"
-	_ "github.com/avito-tech/go-mutesting/mutator/numbers"
-	_ "github.com/avito-tech/go-mutesting/mutator/statement"
+	"mutesting"
+	"mutesting/astutil"
+	"mutesting/mutator"
+	_ "mutesting/mutator/arithmetic"
+	_ "mutesting/mutator/branch"
+	_ "mutesting/mutator/expression"
+	_ "mutesting/mutator/loop"
+	_ "mutesting/mutator/numbers"
+	_ "mutesting/mutator/statement"
 )
 
 const (

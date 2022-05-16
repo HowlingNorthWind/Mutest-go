@@ -1,16 +1,16 @@
-package conditional
+package relational
 
 import (
 	"testing"
 
-	"github.com/avito-tech/go-mutesting/test"
+	"mutesting/test"
 )
 
 func TestMutatorConditionalNegated(t *testing.T) {
 	test.Mutator(
 		t,
 		MutatorConditionalNegated,
-		"../../testdata/conditional/negated.go",
+		"../../testdata/relational/negated.go",
 		6,
 	)
 }

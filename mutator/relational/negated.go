@@ -1,15 +1,15 @@
-package conditional
+package relational
 
 import (
 	"go/ast"
 	"go/token"
 	"go/types"
 
-	"github.com/avito-tech/go-mutesting/mutator"
+	"mutesting/mutator"
 )
 
 func init() {
-	mutator.Register("conditional/negated", MutatorConditionalNegated)
+	mutator.Register("relational/negated", MutatorConditionalNegated)
 }
 
 var negatedMutations = map[token.Token]token.Token{

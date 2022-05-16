@@ -2,7 +2,8 @@ package importing
 
 import (
 	"fmt"
-	"github.com/avito-tech/go-mutesting/internal/models"
+	"mutesting/internal/models"
+
 	"os"
 	"testing"
 

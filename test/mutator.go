@@ -9,8 +9,8 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/avito-tech/go-mutesting"
-	"github.com/avito-tech/go-mutesting/mutator"
+	"mutesting"
+	"mutesting/mutator"
 )
 
 // Mutator tests a mutator.

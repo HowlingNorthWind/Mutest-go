@@ -4,7 +4,8 @@ import (
 	"bytes"
 	"encoding/json"
 	"fmt"
-	"github.com/avito-tech/go-mutesting/internal/models"
+	"mutesting/internal/models"
+
 	"io"
 	"io/ioutil"
 	"os"
