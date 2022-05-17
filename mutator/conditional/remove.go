@@ -1,19 +1,18 @@
 package conditional
 
 import (
-	"github.com/avito-tech/go-mutesting/mutator"
 	"go/ast"
 	"go/token"
 	"go/types"
+	"mutesting/mutator"
 )
 
 func init() {
 	mutator.Register("conditional/remove", MutatorConditionalRemove)
 }
 
-var removeMutations = map[token.Token]token.Token{
-	token.NOT: token.LOR,
-	token.LOR: token.LAND,
+var removeMutations = map[token.Token]bool{
+	token.NOT: true,
 }
 
 func MutatorConditionalRemove(_ *types.Package, _ *types.Info, node ast.Node) []mutator.Mutation {
@@ -23,18 +22,22 @@ func MutatorConditionalRemove(_ *types.Package, _ *types.Info, node ast.Node) []
 	}
 
 	original := n.Op
-	mutated, ok := replaceMutations[original]
+	_, ok = removeMutations[original]
 	if !ok {
 		return nil
 	}
-
+	X := n.X
+	mutatedX := &ast.UnaryExpr{
+		X:  n.X,
+		Op: original,
+	}
 	return []mutator.Mutation{
 		{
 			Change: func() {
-				n.Op = mutated
+				n.X = mutatedX
 			},
 			Reset: func() {
-				n.Op = original
+				n.X = X
 			},
 		},
 	}

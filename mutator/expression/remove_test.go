@@ -3,7 +3,7 @@ package expression
 import (
 	"testing"
 
-	"github.com/avito-tech/go-mutesting/test"
+	"mutesting/test"
 )
 
 func TestMutatorRemoveTerm(t *testing.T) {

@@ -30,9 +30,11 @@ import (
 	"mutesting/mutator"
 	_ "mutesting/mutator/arithmetic"
 	_ "mutesting/mutator/branch"
+	_ "mutesting/mutator/conditional"
 	_ "mutesting/mutator/expression"
 	_ "mutesting/mutator/loop"
 	_ "mutesting/mutator/numbers"
+	_ "mutesting/mutator/relational"
 	_ "mutesting/mutator/statement"
 )
 

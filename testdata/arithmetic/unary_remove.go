@@ -1,5 +1,4 @@
-//go:build ignore
-// +build ignore
+// +build example-main
 
 package main
 

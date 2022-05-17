@@ -5,10 +5,8 @@ package main
 import "fmt"
 
 func main() {
-	i := 100
-
-	i = +i
-	i = -i
-
-	fmt.Println(i)
+	a := 1
+	b := 2
+	fmt.Println(a & ^b)
+	fmt.Println(^a | b)
 }
