@@ -9,7 +9,7 @@ import (
 )
 
 func init() {
-	mutator.Register("relational/negated", MutatorConditionalNegated)
+	mutator.Register("relational/negated", MutatorRelationalNegated)
 }
 
 var negatedMutations = map[token.Token]token.Token{
@@ -21,8 +21,8 @@ var negatedMutations = map[token.Token]token.Token{
 	token.NEQ: token.EQL,
 }
 
-// MutatorConditionalNegated implements a mutator to improved comparison changes.
-func MutatorConditionalNegated(_ *types.Package, _ *types.Info, node ast.Node) []mutator.Mutation {
+// MutatorRelationalNegated implements a mutator to improved comparison changes.
+func MutatorRelationalNegated(_ *types.Package, _ *types.Info, node ast.Node) []mutator.Mutation {
 	n, ok := node.(*ast.BinaryExpr)
 	if !ok {
 		return nil
