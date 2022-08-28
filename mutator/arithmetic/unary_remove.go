@@ -8,7 +8,7 @@ import (
 )
 
 func init() {
-	mutator.Register("arithmetic/unary_remove", MutatorArithmeticUnaryRemove)
+	mutator.Register("arithmetic/base_unary_remove", MutatorArithmeticUnaryRemove)
 }
 
 var unaryRemoveArithmetic = map[token.Token]bool{

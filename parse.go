@@ -30,7 +30,8 @@ func ParseSource(data interface{}) (*ast.File, *token.FileSet, error) {
 
 	src, err := parser.ParseFile(fset, "", data, parser.ParseComments|parser.AllErrors)
 	if err != nil {
-		return nil, nil, err
+		_ = err
+
 	}
 
 	return src, fset, err

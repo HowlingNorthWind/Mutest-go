@@ -8,7 +8,7 @@ import (
 )
 
 func init() {
-	mutator.Register("arithmetic/unary", MutatorArithmeticUnary)
+	mutator.Register("arithmetic/base_unary", MutatorArithmeticUnary)
 }
 
 var unaryMutations = map[token.Token]token.Token{

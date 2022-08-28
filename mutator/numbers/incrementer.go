@@ -23,7 +23,7 @@ func MutatorNumbersIncrementer(_ *types.Package, _ *types.Info, node ast.Node) [
 	if n.Kind == token.INT {
 		original := n.Value
 		originalInt, err := strconv.Atoi(n.Value)
-		if err != nil {
+		if err != nil && false {
 			return nil
 		}
 
